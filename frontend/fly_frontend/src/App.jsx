@@ -23,21 +23,14 @@ function App (){
       <Routes>
          <Route path="/Home" element=
          {<Home />} / >
-         <Route path="/Flights" 
-         element={<Flights />} / >
-         <Route path="/My-Bookings" 
-         elemntt={<My-Booking />} />
-         <Route path="/Support" 
-         elemntt={<Support />} />
-         <Route path="/Admin" 
-         elemntt={<Admin />} />
-         <Route path="/Sign In" 
-         elemntt={<Sign In />} />
-         <Route path="/Register" 
-         elemntt={<Register />} />
+         <Route path="/Flights" element={<Flights />} / >
+        <Route path="/My-Bookings" elemntt={<My-Booking />} />
+         <Route path="/Support" elemntt={<Support />} />
+         <Route path="/Admin" elemntt={<Admin />} />
+         <Route path="/Sign In" elemntt={<Sign In />} />
+         <Route path="/Register" elemntt={<Register />} />
               <Route 
-              path="/booking/:flightId" 
-         element={<BookingFlight />} />
+              path="/booking/:flightId" element={<BookingFlight />} />
       </Routes>
 
       <Footer />
