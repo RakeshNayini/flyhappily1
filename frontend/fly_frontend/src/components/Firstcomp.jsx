@@ -1,7 +1,6 @@
 import React from "react";
 import "../css/Firstcomp.css";
 import planeIcon from "../assets/trans_flight.png"; // put your PNG in src/assets/
-
 function Firstcomp() {
   return (
     <div className="Main">
