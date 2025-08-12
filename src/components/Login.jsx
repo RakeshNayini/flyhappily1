@@ -21,7 +21,8 @@ import '../css/Login.css';
     let remember = rememberRef.current.checked;
     
 
-    console.log('Login Attempt:', {
+    console.log('Login Attempt:', {git init
+
       email: enteredEmail,
       password: enteredPassword,
       remember,
