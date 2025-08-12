@@ -9,7 +9,7 @@ export default function Firstcomp() {
     alert("Scrolling to destinations...");
     window.scrollTo({top:800,behavior:"smooth"});
   };
-  return (
+return (
     <section className="Firstcomp">
     <div className="Main">
       <div className="content">
@@ -55,4 +55,3 @@ export default function Firstcomp() {
     </section>
   );
 }
-
