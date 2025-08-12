@@ -7,4 +7,4 @@ function Maincomp(){
         </main>
     );
 }
-export default Maincomp;
+export default Maincomp;

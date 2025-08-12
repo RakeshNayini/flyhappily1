@@ -4,9 +4,9 @@ import '../css/Heading.css'
 function Heading() {
     return (
         <header className='heading'>
-            <img src={flightlogo} alt="Flight Logo" />
+            {/* <img src={flightlogo} alt="Flight Logo" />
             <b>FlyHappily</b>
-            <Menubar />
+            <Menubar /> */}
         </header>
     );
 }
