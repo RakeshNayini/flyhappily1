@@ -1,15 +1,22 @@
 import React from "react";
 import "../css/Firstcomp.css";
 import planeIcon from "../assets/trans_flight.png"; // put your PNG in src/assets/
-function Firstcomp() {
-  return (
+export default function Firstcomp() {
+  const handleBookFlight =() => {
+    alert("redirecting to flight booking page...");
+  };
+   const handleExplore =() => {
+    alert("Scrolling to destinations...");
+    window.scrollTo({top:800,behavior:"smooth"});
+  };
+return (
+    <section className="Firstcomp">
     <div className="Main">
       <div className="content">
         {/* Flying plane animation */}
         <div className="flight-container">
           <img src={planeIcon} alt="Flight" className="flight" />
         </div>
-
         <h1>
           Fly Anywhere,<br />
           <span>Anytime</span>
@@ -22,8 +29,8 @@ function Firstcomp() {
         </p>
 
         <div className="buttons">
-          <button className="book-btn">Booking Your Flight&nbsp;→</button>
-          <button className="explore-btn">Explore Destination</button>
+          <button className="book-btn" onClick={handleBookFlight}>Booking Your Flight&nbsp;→</button>
+          <button className="explore-btn" onClick={handleExplore}>Explore Destination</button>
         </div>
 
         <div className="stats">
@@ -45,7 +52,6 @@ function Firstcomp() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
-
-export default Firstcomp;
