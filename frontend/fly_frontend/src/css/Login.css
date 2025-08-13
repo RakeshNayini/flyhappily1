@@ -1,0 +1,67 @@
+.login {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px  gray;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: darkgrey;
+  font-size: x-large;
+}
+
+.login h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  color: red;
+  font-size: x-large;
+}
+
+.login label {
+  display: block;
+  margin-bottom: 12px;
+  color:darkmagenta;
+  font-weight: 500;
+  font-size: x-large;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  border: 1px solid darkorange;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: x-large;
+}
+
+.login input[type="checkbox"] {
+  margin-right: 8px;
+  font-size: x-large;
+}
+
+.login button {
+  padding: 10px 16px;
+  margin-top: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color:chocolate;
+  color: white;
+  font-size: x-large;
+}
+
+.login p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: x-large;
+  color: aqua;
+}
+
+.login p button {
+  background: none;
+  border: none;
+  color:aqua;
+  padding: 0;
+  font-size: x-large;
+}
