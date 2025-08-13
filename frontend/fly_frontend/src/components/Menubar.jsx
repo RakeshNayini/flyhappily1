@@ -1,5 +1,4 @@
 import userlogo from '../assets/user.png';
-import '../css/Menubar.css';
 function Menubar(){
     return(
         <aside className="menubar">
@@ -9,10 +8,8 @@ function Menubar(){
                 <li>MyBookings</li>
                 <li>Support</li>
             </ul>
-            <ul className='actions'>
-                <li><button><img src={userlogo} alt="user logo" />Signin</button></li>
-                <li><button>Register</button></li>
-            </ul>
+                <button className='signin'><img src={userlogo} alt="user logo" />Sign In</button>
+                <button className='register'>Register</button>
         </aside>
     );
 }
