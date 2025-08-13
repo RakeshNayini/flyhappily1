@@ -1,0 +1,83 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 40px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  font-family: Arial, sans-serif;
+}
+
+/* Left side logo & brand name */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo {
+  width: 40px;
+  height: 45px;
+  border-radius: 8px;
+}
+
+.brand-name {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  font-style: italic;
+}
+
+/* Center menu */
+.navbar-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  font-size: 1.2rem;
+  color: #2d2d2d;
+}
+
+.navbar-menu li {
+  cursor: pointer;
+}
+
+.navbar-menu li:hover {
+  color: #0077ff;
+}
+
+/* Right section */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.signin {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+  color: #1d1d1f;
+  cursor: pointer;
+}
+
+.user-icon {
+  font-size: 0.8rem;
+}
+
+/* Register button */
+.register-btn {
+  background: linear-gradient(to right, #1d8cf8, #1c7ff0);
+  border: none;
+  padding: 6px 16px;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  opacity: 0.9;
+}

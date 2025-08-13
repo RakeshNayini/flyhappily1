@@ -1,9 +1,9 @@
-
+import Firstcomp from './Firstcomp'
 function Maincomp(){
     return(
         <main className="maincomp">
-            <h1>welcome</h1>
+            <Firstcomp />
         </main>
     );
 }
-export default Maincomp;
+export default Maincomp;

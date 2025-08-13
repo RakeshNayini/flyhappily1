@@ -1,16 +1,13 @@
-import './App.css';
-import Heading from './components/Heading';
-import Maincomp from './components/Maincomp';
-import Footer from './components/Footer';
-import Menubar from './components/Menubar';
 
+import Footer from './components/Footer';
+import Maincomp from './components/Maincomp';
+import Navbar from './components/Navbar';
 function App() {
   return (
     <div className="mainapp">
-      <Heading />
-      <Menubar />
-      <Maincomp />
-      <Footer />
+        <Navbar />
+        <Maincomp />
+        <Footer />
 
     </div>
   );
