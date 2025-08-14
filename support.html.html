@@ -1,0 +1,187 @@
+<!-- Help Container with Popup -->
+<div id="helpContainer" style="position:relative; display:inline-block;">
+  <!-- Help Link -->
+  <a href="#" id="helpLink" style="color:black; text-decoration:none; padding:10px; border:1px solid black;">
+    Need Help?
+  </a>
+
+  <!-- Popup Options -->
+  <div id="helpOptions" style="
+    display:none;
+    position:absolute;
+    top:100%;
+    left:0;
+    background:white;
+    border:1px solid blue;
+    padding:10px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    z-index:1000;
+    width:150px;
+  ">
+    <p style="margin:0;">
+      <a href="#" onclick="toggleChat(); return false;" style="text-decoration:none;">💬 Chat with Us</a>
+    </p>
+    <p style="margin:0;">
+      <a href="report an issue.html" style="text-decoration:none;">🛠️ Report an Issue</a>
+    </p>
+  </div>
+</div>
+
+<!-- Chat Box -->
+<div class="chat-box" id="chatBox">
+  <div class="chat-header">Customer Support</div>
+  <div class="chat-messages" id="chatMessages"></div>
+  <div class="chat-input">
+    <input type="text" id="userInput" placeholder="Type a message..." aria-label="Type your message">
+    <button onclick="sendMessage()" aria-label="Send message">Send</button>
+  </div>
+</div>
+
+<!-- Styles -->
+<style>
+  .chat-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 500px;
+  background: white;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  display: none;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  z-index: 2000;
+}
+ .chat-header {
+    background: blue;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .chat-messages {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    font-size: 14px;
+  }
+
+  .chat-input {
+    display: flex;
+    border-top: 1px solid lightgray;
+  }
+
+  .chat-input input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+  }
+
+  .chat-input button {
+    background: blue;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .chat-messages p {
+    margin: 5px 0;
+  }
+</style>
+
+<!-- Scripts -->
+<script>
+  // Show/hide help options on hover
+  const helpContainer = document.getElementById('helpContainer');
+  const helpOptions = document.getElementById('helpOptions');
+
+  helpContainer.addEventListener('mouseover', () => {
+    helpOptions.style.display = 'block';
+  });
+
+  helpContainer.addEventListener('mouseout', () => {
+    helpOptions.style.display = 'none';
+  });
+
+  // Toggle chat box visibility
+  function toggleChat() {
+    const chatBox = document.getElementById("chatBox");
+    chatBox.style.display = (chatBox.style.display === "none" || chatBox.style.display === "") ? "flex" : "none";
+  }
+
+  // Send message logic
+  function sendMessage() {
+    const input = document.getElementById("userInput");
+    const message = input.value.trim();
+    if (!message) return;
+
+    const chatMessages = document.getElementById("chatMessages");
+
+    // Show user message
+    chatMessages.innerHTML += `<p><b>You:</b> ${message}</p>`;
+    input.value = "";
+
+    // Bot reply logic
+    let reply = "Sorry, I didn't understand that.";
+    const lowerMessage = message.toLowerCase();
+    if ( lowerMessage.includes("hello") ||
+  	lowerMessage.includes("hi") ||
+  	lowerMessage.includes("hlo")||
+	lowerMessage.includes("namaste") ||
+  	lowerMessage.includes("adab") ||
+  	lowerMessage.includes("hey")||
+  	lowerMessage.includes("ninne")||
+	lowerMessage.includes("oye")
+  ) {
+      reply = "Hi there! How can I help you with your flight booking?";
+    } else if (lowerMessage.includes("book") || lowerMessage.includes("flight ticket")) {
+  reply = "Visit our homepage, enter your travel details, choose a flight, and follow the checkout process to complete your booking."; 
+} else if (lowerMessage.includes("payment options") || lowerMessage.includes("how to pay")) {
+  reply = "We accept credit/debit cards, UPI, net banking, and select digital wallets."; 
+} else if (lowerMessage.includes("cancel") || lowerMessage.includes("modify") || lowerMessage.includes("change booking")) {
+  reply = "To cancel or modify a booking, go to 'My Bookings' and select the appropriate option."; 
+} else if (lowerMessage.includes("pricing") || lowerMessage.includes("price") || lowerMessage.includes("how are prices calculated")) {
+  reply = "Prices are calculated based on route, demand, travel dates, and airline policies."; 
+} else if (lowerMessage.includes("fees") || lowerMessage.includes("booking fees")) {
+  reply = "Booking fees vary depending on the airline and payment method. You’ll see a breakdown during checkout."; 
+} else if (lowerMessage.includes("refund")) {
+  reply = "Refund eligibility depends on the fare type and airline policy. Please check your booking details or contact support."; 
+} else if (lowerMessage.includes("document") || lowerMessage.includes("travel documents") || lowerMessage.includes("id proof")) {
+  reply = "For domestic flights, a valid government-issued ID is required. For international flights, a passport and visa may be necessary."; 
+} else if (lowerMessage.includes("visa") || lowerMessage.includes("do i need a visa")) {
+  reply = "Visa requirements vary by country. Please check with the destination's embassy or consulate."; 
+} else if (lowerMessage.includes("flight status") || lowerMessage.includes("where flight") || lowerMessage.includes("check flight")) {
+  reply = "You can check flight status using your booking ID or flight number on our website or mobile app."; 
+} else if (lowerMessage.includes("flight delay") || lowerMessage.includes("flight cancellation") || lowerMessage.includes("delays")) {
+  reply = "We notify you via email/SMS and offer rebooking or refund options based on airline policies."; 
+} else if (lowerMessage.includes("support hours") || lowerMessage.includes("customer service time") || lowerMessage.includes("when are you available")) {
+  reply = "Our support team is available 24/7 to assist you."; 
+} else if (lowerMessage.includes("contact support") || lowerMessage.includes("customer support") || lowerMessage.includes("help desk")) {
+  reply = "You can contact customer support via chat, email, or phone. Visit our 'Contact Us' page for details."; 
+} else if (lowerMessage.includes("baggage") || lowerMessage.includes("luggage") || lowerMessage.includes("baggage policy")) {
+  reply = "Baggage allowance varies by airline and ticket type. Check your booking for specific limits and fees."; 
+} else if (lowerMessage.includes("assistance") || lowerMessage.includes("wheelchair") || lowerMessage.includes("special help")) {
+  reply = "We offer wheelchair support, priority boarding, and other services. Please request assistance during booking or contact support."; 
+}
+
+
+
+
+    chatMessages.innerHTML += `<p><b>Bot:</b> ${reply}</p>`;
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+
+  // Allow Enter key to send message
+  document.getElementById("userInput").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") sendMessage();
+  });
+</script>
