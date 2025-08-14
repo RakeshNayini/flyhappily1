@@ -1,5 +1,4 @@
 
-import FlightSearch from './components/FlightSearch';
 import Footer from './components/Footer';
 import Maincomp from './components/Maincomp';
 import Navbar from './components/Navbar';
@@ -11,7 +10,6 @@ function App() {
         <Navbar />
         <Maincomp />
         <Secondcomp />
-        <FlightSearch />
         <Footer />
     </div>
   );
