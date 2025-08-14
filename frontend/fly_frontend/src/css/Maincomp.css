@@ -1,0 +1,13 @@
+.maincomp {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    padding-left: 5vw;
+    color: rgb(248, 245, 245);
+
+    background: 
+      linear-gradient(to bottom, #2989d8 0%, #2989d8 34%, #7db9e8 100%),
+      url('../assets/flight1.png') no-repeat center center;
+    background-size: contain;
+    background-blend-mode: overlay;
+}

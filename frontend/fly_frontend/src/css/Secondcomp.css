@@ -1,0 +1,97 @@
+
+.flight-search {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+.flight-search h1{
+  color: black;
+  text-shadow: none;
+}
+.flight-search p{
+  text-shadow: none;
+}
+.title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  color: #6c6c6c;
+  margin-bottom: 30px;
+}
+
+.form-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.trip-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  background: #f3f3f3;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.tab.active {
+  background: linear-gradient(90deg, #0072ff, #00c6ff);
+  color: white;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 150px;
+  text-align: left;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.search-btn {
+  background: #ff914d;
+  color: white;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.search-btn:hover {
+  background: #ff7f2a;
+}

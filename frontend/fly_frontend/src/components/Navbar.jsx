@@ -6,7 +6,11 @@ import userlogo from "../assets/user.png";
  // Replace with your logo path
 
 export default function Navbar() {
+  const flight =() => {
+    window.scrollTo({top:600,behavior:"smooth"});
+  };
   return (
+    
     <nav className="navbar">
       {/* Left Logo & Name */}
       <div className="navbar-left">
@@ -17,7 +21,7 @@ export default function Navbar() {
       {/* Center Menu */}
       <ul className="navbar-menu">
         <li>Home</li>
-        <li>Flights</li>
+        <li onClick={flight}>Flights</li>
         <li>My Bookings</li>
         <li>Support</li>
       </ul>

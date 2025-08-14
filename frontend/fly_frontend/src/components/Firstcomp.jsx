@@ -3,10 +3,9 @@ import "../css/Firstcomp.css";
 import planeIcon from "../assets/trans_flight.png"; // put your PNG in src/assets/
 export default function Firstcomp() {
   const handleBookFlight =() => {
-    alert("redirecting to flight booking page...");
+    window.scrollTo({top:600,behavior:"smooth"});
   };
    const handleExplore =() => {
-    alert("Scrolling to destinations...");
     window.scrollTo({top:800,behavior:"smooth"});
   };
 return (
@@ -36,17 +35,14 @@ return (
         <div className="stats">
           <div>
             <strong>500+</strong>
-            <br />
             Destinations
           </div>
           <div>
             <strong>50M</strong>
-            <br />
             Happy Travelers
           </div>
           <div>
             <strong>24/7</strong>
-            <br />
             Support
           </div>
         </div>
