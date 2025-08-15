@@ -1,17 +1,17 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
-class User(models.Model):
-    UserID = models.IntegerField(primary_key=True)
-    Name = models.CharField(max_length=100)
-    Email = models.EmailField(unique=True)
-    Password = models.CharField(max_length=255)
-    PhoneNumber = models.CharField(max_length=15)
-
-    def _str_(self):
-        return self.Name
-
+class CustomUser(AbstractUser):
+    name = models.CharField(max_length=100)
+    mobileno = models.CharField(max_length=15)
+    profile_image_url = models.URLField(blank=True, null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return self.username
 
 class Flight(models.Model):
     FlightID = models.IntegerField(primary_key=True)
@@ -31,7 +31,7 @@ class Flight(models.Model):
 
 class Booking(models.Model):
     BookingID = models.IntegerField(primary_key=True)
-    UserID = models.ForeignKey(User, on_delete=models.CASCADE)
+    UserID = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     FlightID = models.ForeignKey(Flight, on_delete=models.CASCADE)
     BookingDate = models.DateTimeField(auto_now_add=True)
     TravelDate = models.DateField()

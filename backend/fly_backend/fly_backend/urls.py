@@ -19,7 +19,8 @@ from django.urls import path,include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('first/',include('firstapp.urls')),
-    path('db/',include('dbapp.urls')),
+    # path('db/',include('dbapp.urls')),
+    
+    path('api/', include('api.urls')),
 ]
 
