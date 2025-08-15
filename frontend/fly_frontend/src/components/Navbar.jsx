@@ -7,7 +7,7 @@ import userlogo from "../assets/user.png";
 
 export default function Navbar() {
   const flight =() => {
-    window.scrollTo({top:600,behavior:"smooth"});
+    window.scrollTo({top:670,behavior:"smooth"});
   };
   return (
     

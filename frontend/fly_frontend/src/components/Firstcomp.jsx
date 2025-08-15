@@ -3,10 +3,10 @@ import "../css/Firstcomp.css";
 import planeIcon from "../assets/trans_flight.png"; // put your PNG in src/assets/
 export default function Firstcomp() {
   const handleBookFlight =() => {
-    window.scrollTo({top:600,behavior:"smooth"});
+    window.scrollTo({top:670,behavior:"smooth"});
   };
    const handleExplore =() => {
-    window.scrollTo({top:800,behavior:"smooth"});
+    window.scrollTo({top:1100,behavior:"smooth"});
   };
 return (
     <section className="Firstcomp">
